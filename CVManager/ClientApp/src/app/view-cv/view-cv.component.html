@@ -1,0 +1,53 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <h2 style="color:orange;">{{CV.name}}</h2>
+    </mat-card-header>
+  </mat-card>
+  <br />
+  <div class="row">
+    <div class="col-3">
+      <mat-card style="height:100%;">
+        <mat-card-header>
+          <h2 style="color:orange;">Personal Information</h2>
+        </mat-card-header>
+        <br />
+        <mat-card-content>
+          <mat-label style="color:orange;">Full Name</mat-label>
+          <br />
+          <mat-label>{{CV.personalInformation.fullName}}</mat-label>
+          <hr />
+
+          <mat-label style="color:orange;">Email</mat-label>
+          <br />
+          <mat-label>{{CV.personalInformation.email}}</mat-label>
+          <hr />
+
+          <mat-label style="color:orange;">Phone Number</mat-label>
+          <br />
+          <mat-label>{{CV.personalInformation.mobileNumber}}</mat-label>
+          <hr />
+
+          <mat-label style="color:orange;">City</mat-label>
+          <br />
+          <mat-label>{{CV.personalInformation.cityName}}</mat-label>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-9">
+      <mat-card style="height:100%;">
+        <mat-card-header>
+          <h2 style="color:orange;">Experience Information</h2>
+        </mat-card-header>
+        <br />
+        <mat-card-content>
+          <mat-label style="color:orange;">Company Name : </mat-label> <h2>{{CV.experinceInformation.companyName}}</h2>
+          <br />
+          <mat-label style="color:orange;">Location : </mat-label> <h5>{{CV.experinceInformation.city}}</h5>
+          <br />
+          <mat-label style="color:orange;">Company Field : </mat-label> <h5>{{CV.experinceInformation.compnayField}}</h5>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

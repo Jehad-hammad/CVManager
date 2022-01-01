@@ -1,0 +1,41 @@
+<mat-sidenav-container style="min-height:93.4%;background:url('../assets/Images/pic.jpg') " >
+  <mat-sidenav #sidenav mode="over" position="start" color="primary" style="background:url('../assets/Images/pic2.jpg');background-size:cover;background-repeat:no-repeat">
+    <mat-nav-list style="color:white !important;width:240px;">
+      <h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px"><b style="color:white !important;">CV Manager</b></h4>
+      <a mat-list-item
+         style="color:white !important;"
+          [routerLink]="['/list']"
+         >
+        <mat-icon matListIcon> fact_check </mat-icon>
+        CV List
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="min-height:93%">
+
+    <button mat-icon-button [disableRipple]="true" *ngIf="!IsSidebarOpened()" (click)="toggle()" style="margin-right:10px ;color:white!important">
+      <mat-icon class="toolBarIcon">menu</mat-icon>
+    </button>
+
+    <img src="./../assets/Images/logo-removebg-preview.png" height="90" width="160" alt="Alternate Text" />
+
+
+    <div class="sidenav-content" style=" margin-top: -5px;">
+      <div class="container-fluid" style="min-height:400px">
+        <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#FFC0CB" type="line-scale-party" [fullScreen]="true">
+        </ngx-spinner>
+        <router-outlet #o="outlet"></router-outlet>
+        <br />
+      </div>
+    </div>
+    <simple-notifications></simple-notifications>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer style="min-height:7%;background:url('../assets/Images/pic3.jpg')" >
+  <div class="footer-copyright text-center py-3">
+    © 2022 Jehad Hammad
+  </div>
+</footer>
